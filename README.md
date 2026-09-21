@@ -9,13 +9,13 @@ The directory `reference/1KGP_EAS_reference_panel` is intentionally excluded. Al
 Download every release asset into one directory, then run:
 
 ```bash
-shasum -a 256 -c SHA256SUMS.txt
+shasum -a 256 -c SHA256SUMS-100M.txt
 ```
 
 ## Restore
 
 ```bash
-cat reference.tar.zst.part-* | zstd -d | tar -xf -
+cat reference.tar.zst.chunk-* | zstd -d | tar -xf -
 ```
 
 This recreates the `reference` directory in the current directory.
